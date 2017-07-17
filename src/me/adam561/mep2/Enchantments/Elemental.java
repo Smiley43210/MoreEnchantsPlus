@@ -92,4 +92,3 @@ public class Elemental extends CustomEnchantment {
 		return "Swords, Bows";
 	}
 }
-

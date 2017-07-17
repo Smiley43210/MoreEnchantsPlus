@@ -35,4 +35,3 @@ public class Protective extends CustomEnchantment implements Listener {
 		return "Chestplates";
 	}
 }
-

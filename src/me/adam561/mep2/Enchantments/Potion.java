@@ -74,4 +74,3 @@ public class Potion extends CustomEnchantment implements Listener {
 		return "Swords, Bows";
 	}
 }
-

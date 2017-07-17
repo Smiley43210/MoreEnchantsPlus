@@ -29,4 +29,3 @@ public class ConfigData {
 		return this.configID;
 	}
 }
-

@@ -78,4 +78,3 @@ public class Knowledge extends CustomEnchantment implements Listener {
 		return "Swords, Bows, Pickaxes";
 	}
 }
-

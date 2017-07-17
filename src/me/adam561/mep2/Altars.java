@@ -75,4 +75,3 @@ public class Altars implements Listener {
 		e.getClickedBlock().getWorld().strikeLightningEffect(e.getClickedBlock().getLocation());
 	}
 }
-

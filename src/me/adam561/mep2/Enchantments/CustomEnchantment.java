@@ -157,4 +157,3 @@ public class CustomEnchantment implements Listener {
 		return this.name;
 	}
 }
-

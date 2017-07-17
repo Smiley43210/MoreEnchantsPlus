@@ -68,4 +68,3 @@ public class Speed extends CustomEnchantment implements Listener {
 		return "Bows, Boots";
 	}
 }
-

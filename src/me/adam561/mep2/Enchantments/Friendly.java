@@ -47,4 +47,3 @@ public class Friendly extends CustomEnchantment implements Listener {
 		return "Leggings";
 	}
 }
-

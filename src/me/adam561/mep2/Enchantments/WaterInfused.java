@@ -55,4 +55,3 @@ public class WaterInfused extends CustomEnchantment implements Listener {
 		return "Swords, Bows";
 	}
 }
-

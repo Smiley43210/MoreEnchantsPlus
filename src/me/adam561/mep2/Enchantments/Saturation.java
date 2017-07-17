@@ -36,4 +36,3 @@ public class Saturation extends CustomEnchantment implements Listener {
 		return "Helmets";
 	}
 }
-
