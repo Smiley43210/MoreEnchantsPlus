@@ -56,7 +56,7 @@ public class Main extends JavaPlugin implements Listener {
 			}
 		}
 		this.initEnchantments();
-		Bukkit.getServer().getPluginManager().registerEvents(new Alters(), Main.getPlugin());
+		Bukkit.getServer().getPluginManager().registerEvents(new Altars(), Main.getPlugin());
 	}
 	
 	private void initEnchantments() {
@@ -118,8 +118,8 @@ public class Main extends JavaPlugin implements Listener {
 		p.sendMessage(ChatColor.GOLD + " --- More Enchants+ " + this.getDescription().getVersion() + " Commands --- ");
 		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " Help");
 		p.sendMessage(ChatColor.GRAY + "    - Show this dialogue");
-		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " Alter");
-		p.sendMessage(ChatColor.GRAY + "    - View tutorials for building Knowledge-Infused alters");
+		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " Altar");
+		p.sendMessage(ChatColor.GRAY + "    - View tutorials for building Knowledge-Infused altars");
 		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <Enchantment>");
 		p.sendMessage(ChatColor.GRAY + "    - Get enchantment info");
 		if (p.hasPermission("mep.command")) {
@@ -140,11 +140,11 @@ public class Main extends JavaPlugin implements Listener {
 					return true;
 				}
 				if (args.length == 1) {
-					if (args[0].equalsIgnoreCase("alter")) {
+					if (args[0].equalsIgnoreCase("altar")) {
 						p.sendMessage("");
-						p.sendMessage(ChatColor.GOLD + " --- Info for: " + ChatColor.AQUA + "Alters" + ChatColor.GOLD + " ---");
-						p.sendMessage(ChatColor.GRAY + "Tier 1 Alter (+1 level): " + ChatColor.GREEN + "http://imgur.com/a/Ux2XU");
-						p.sendMessage(ChatColor.GRAY + "Tier 2 Alter (+2 levels): " + ChatColor.GREEN + "http://imgur.com/a/GTws9");
+						p.sendMessage(ChatColor.GOLD + " --- Info for: " + ChatColor.AQUA + "Altars" + ChatColor.GOLD + " ---");
+						p.sendMessage(ChatColor.GRAY + "Tier 1 Altar (+1 level): " + ChatColor.GREEN + "http://imgur.com/a/Ux2XU");
+						p.sendMessage(ChatColor.GRAY + "Tier 2 Altar (+2 levels): " + ChatColor.GREEN + "http://imgur.com/a/GTws9");
 						return false;
 					}
 					if (args[0].equalsIgnoreCase("update") && sender.hasPermission("mep.update")) {
@@ -241,8 +241,8 @@ public class Main extends JavaPlugin implements Listener {
 					if ("help".startsWith(args[0].toLowerCase())) {
 						comps.add("Help");
 					}
-					if ("alter".startsWith(args[0].toLowerCase())) {
-						comps.add("Alter");
+					if ("altar".startsWith(args[0].toLowerCase())) {
+						comps.add("Altar");
 					}
 					if ("update".startsWith(args[0].toLowerCase()) && sender.hasPermission("mep.update")) {
 						comps.add("Update");
@@ -252,7 +252,7 @@ public class Main extends JavaPlugin implements Listener {
 						comps.add(en.toString());
 					}
 					comps.add("Help");
-					comps.add("Alter");
+					comps.add("Altar");
 					if (sender.hasPermission("mep.update")) {
 						comps.add("Update");
 					}
