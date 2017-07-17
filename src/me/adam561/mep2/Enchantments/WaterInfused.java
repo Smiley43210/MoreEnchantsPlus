@@ -35,13 +35,13 @@ public class WaterInfused extends CustomEnchantment implements Listener {
 		} else {
 			p = (Player) e.getDamager();
 		}
-		if (!this.itemHasEnchantment(p.getItemInHand())) {
+		if (!this.itemHasEnchantment(p.getInventory().getItemInMainHand())) {
 			return;
 		}
 		if (!(e.getEntity() instanceof Blaze) && !(e.getEntity() instanceof Enderman)) {
 			return;
 		}
-		e.setDamage((double) Math.round(e.getDamage() * (double) (this.getEnchantmentLevel(p.getItemInHand()) + 1)));
+		e.setDamage((double) Math.round(e.getDamage() * (double) (this.getEnchantmentLevel(p.getInventory().getItemInMainHand()) + 1)));
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation(), Effect.SMOKE, 5);
 	}
 	

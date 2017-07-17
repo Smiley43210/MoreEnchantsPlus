@@ -31,7 +31,7 @@ public class FireInfused extends CustomEnchantment implements Listener {
 		if (p.getGameMode().equals(GameMode.CREATIVE)) {
 			return;
 		}
-		if (!this.itemHasEnchantment(p.getItemInHand())) {
+		if (!this.itemHasEnchantment(p.getInventory().getItemInMainHand())) {
 			return;
 		}
 		Block b = e.getBlock();
@@ -44,8 +44,8 @@ public class FireInfused extends CustomEnchantment implements Listener {
 		if (ingot.equals(Material.AIR)) {
 			return;
 		}
-		if (e.getPlayer().getItemInHand().getEnchantments().toString().contains("LOOT_BONUS_BLOCKS")) {
-			int level = e.getPlayer().getItemInHand().getEnchantmentLevel(Enchantment.LOOT_BONUS_BLOCKS);
+		if (e.getPlayer().getInventory().getItemInMainHand().getEnchantments().toString().contains("LOOT_BONUS_BLOCKS")) {
+			int level = e.getPlayer().getInventory().getItemInMainHand().getEnchantmentLevel(Enchantment.LOOT_BONUS_BLOCKS);
 			Random rand = new Random();
 			if (level == 1) {
 				level = 2;
@@ -79,13 +79,13 @@ public class FireInfused extends CustomEnchantment implements Listener {
 		} else {
 			p = (Player) e.getDamager();
 		}
-		if (!this.itemHasEnchantment(p.getItemInHand())) {
+		if (!this.itemHasEnchantment(p.getInventory().getItemInMainHand())) {
 			return;
 		}
 		if (!(e.getEntity() instanceof Guardian) && !(e.getEntity() instanceof Squid)) {
 			return;
 		}
-		e.setDamage((double) Math.round(e.getDamage() * (double) (this.getEnchantmentLevel(p.getItemInHand()) + 1)));
+		e.setDamage((double) Math.round(e.getDamage() * (double) (this.getEnchantmentLevel(p.getInventory().getItemInMainHand()) + 1)));
 		e.getEntity().getLocation().getWorld().playEffect(e.getEntity().getLocation(), Effect.MOBSPAWNER_FLAMES, 5);
 	}
 	

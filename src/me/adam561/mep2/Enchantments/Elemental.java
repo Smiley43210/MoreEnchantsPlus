@@ -40,10 +40,10 @@ public class Elemental extends CustomEnchantment {
 		} else {
 			p = (Player) edev.getDamager();
 		}
-		if (!this.itemHasEnchantment(p.getItemInHand())) {
+		if (!this.itemHasEnchantment(p.getInventory().getItemInMainHand())) {
 			return;
 		}
-		int level = this.getEnchantmentLevel(p.getItemInHand());
+		int level = this.getEnchantmentLevel(p.getInventory().getItemInMainHand());
 		LivingEntity entity = e.getEntity();
 		int duration = level * 20;
 		int amp = level / 2 + 1;

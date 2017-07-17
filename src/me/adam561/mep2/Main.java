@@ -197,7 +197,7 @@ public class Main extends JavaPlugin implements Listener {
 					if (!p.hasPermission("mep.command")) {
 						return false;
 					}
-					ItemStack item = p.getItemInHand();
+					ItemStack item = p.getInventory().getItemInMainHand();
 					if (item.getType().equals(Material.AIR)) {
 						p.sendMessage(ChatColor.RED + "[ME+] Please hold an item in your hand to enchant!");
 						return false;
@@ -213,7 +213,7 @@ public class Main extends JavaPlugin implements Listener {
 						if (!en.toString().equalsIgnoreCase(enchantment)) {
 							continue;
 						}
-						en.forceEnchantItem(p.getItemInHand(), level);
+						en.forceEnchantItem(p.getInventory().getItemInMainHand(), level);
 						p.sendMessage(ChatColor.GREEN + "[ME+] Successfully enchanted your " + item.getType().toString().toLowerCase().replaceAll("_", " ") + " with " + en.getName() + " " + RomanNumerals.getRoman(level));
 						return true;
 					}

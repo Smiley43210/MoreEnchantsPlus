@@ -45,7 +45,7 @@ public class Potion extends CustomEnchantment implements Listener {
 		} else {
 			p = (Player) e.getDamager();
 		}
-		if (!this.itemHasEnchantment(p.getItemInHand())) {
+		if (!this.itemHasEnchantment(p.getInventory().getItemInMainHand())) {
 			return;
 		}
 		if (!(e.getEntity() instanceof LivingEntity)) {
@@ -61,7 +61,7 @@ public class Potion extends CustomEnchantment implements Listener {
 		if (e.getDamage() <= 0.0) {
 			return;
 		}
-		((LivingEntity) e.getEntity()).addPotionEffect(new PotionEffect(this.type, 20 * this.getEnchantmentLevel(p.getItemInHand()), 1));
+		((LivingEntity) e.getEntity()).addPotionEffect(new PotionEffect(this.type, 20 * this.getEnchantmentLevel(p.getInventory().getItemInMainHand()), 1));
 	}
 	
 	@Override

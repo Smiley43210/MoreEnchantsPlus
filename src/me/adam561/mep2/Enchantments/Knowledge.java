@@ -39,18 +39,18 @@ public class Knowledge extends CustomEnchantment implements Listener {
 		} else {
 			p = (Player) edev.getDamager();
 		}
-		if (!this.itemHasEnchantment(p.getItemInHand())) {
+		if (!this.itemHasEnchantment(p.getInventory().getItemInMainHand())) {
 			return;
 		}
-		e.setDroppedExp(e.getDroppedExp() * (this.getEnchantmentLevel(p.getItemInHand()) + 1));
+		e.setDroppedExp(e.getDroppedExp() * (this.getEnchantmentLevel(p.getInventory().getItemInMainHand()) + 1));
 	}
 	
 	@EventHandler
 	public void onBlockBreakEvent(BlockBreakEvent e) {
-		if (!this.itemHasEnchantment(e.getPlayer().getItemInHand())) {
+		if (!this.itemHasEnchantment(e.getPlayer().getInventory().getItemInMainHand())) {
 			return;
 		}
-		e.setExpToDrop(e.getExpToDrop() * (this.getEnchantmentLevel(e.getPlayer().getItemInHand()) + 1));
+		e.setExpToDrop(e.getExpToDrop() * (this.getEnchantmentLevel(e.getPlayer().getInventory().getItemInMainHand()) + 1));
 	}
 	
 	@Override
