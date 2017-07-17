@@ -122,6 +122,8 @@ public class Main extends JavaPlugin implements Listener {
 		p.sendMessage(ChatColor.GRAY + "    - View tutorials for building Knowledge-Infused altars");
 		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <Enchantment>");
 		p.sendMessage(ChatColor.GRAY + "    - Get enchantment info");
+		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " List");
+		p.sendMessage(ChatColor.GRAY + "    - Show list of enchantments");
 		if (p.hasPermission("mep.command")) {
 			p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <Enchantment> <Level>");
 			p.sendMessage(ChatColor.GRAY + "    - Enchant item with level");
@@ -146,8 +148,17 @@ public class Main extends JavaPlugin implements Listener {
 						p.sendMessage(ChatColor.GRAY + "Tier 1 Altar (+1 level): " + ChatColor.GREEN + "http://imgur.com/a/Ux2XU");
 						p.sendMessage(ChatColor.GRAY + "Tier 2 Altar (+2 levels): " + ChatColor.GREEN + "http://imgur.com/a/GTws9");
 						return false;
-					}
-					if (args[0].equalsIgnoreCase("update") && sender.hasPermission("mep.update")) {
+					} else if (args[0].equalsIgnoreCase("list")) {
+						p.sendMessage(ChatColor.GOLD + " --- MEP Enchantment List ---");
+						
+						for (CustomEnchantment en : this.enchants) {
+							p.sendMessage(en.getName());
+						}
+						
+						p.sendMessage(ChatColor.GOLD + "Use " + ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <enchantment>" + ChatColor.GOLD + " for information about a particular enchantment");
+						
+						return true;
+					} else if (args[0].equalsIgnoreCase("update") && sender.hasPermission("mep.update")) {
 						if (!sender.isOp()) {
 							return true;
 						}
@@ -175,22 +186,23 @@ public class Main extends JavaPlugin implements Listener {
 						}
 						sender.sendMessage(ChatColor.RED + "There was an error with the update, check the console for possible errors.");
 						return true;
-					}
-					for (CustomEnchantment en : this.enchants) {
-						if (!en.toString().equalsIgnoreCase(args[0])) {
-							continue;
+					} else {
+						for (CustomEnchantment en : this.enchants) {
+							if (!en.toString().equalsIgnoreCase(args[0])) {
+								continue;
+							}
+							p.sendMessage("");
+							p.sendMessage(ChatColor.GOLD + " --- Info for: " + en.getName() + ChatColor.GOLD + " ---");
+							p.sendMessage(ChatColor.GRAY + "Description: " + ChatColor.GREEN + en.userDescription());
+							p.sendMessage(ChatColor.GRAY + "Usable Items: " + ChatColor.GREEN + en.userItems());
+							p.sendMessage(ChatColor.GRAY + "Chance to Enchant: " + ChatColor.GREEN + en.getChance() + "%");
+							p.sendMessage(ChatColor.GRAY + "Minimum EXP Cost: " + ChatColor.GREEN + en.getMinExp() + " Level(s)");
+							p.sendMessage(ChatColor.GRAY + "Maximum Level: " + ChatColor.GREEN + en.getMaxLevel());
+							return true;
 						}
-						p.sendMessage("");
-						p.sendMessage(ChatColor.GOLD + " --- Info for: " + en.getName() + ChatColor.GOLD + " ---");
-						p.sendMessage(ChatColor.GRAY + "Description: " + ChatColor.GREEN + en.userDescription());
-						p.sendMessage(ChatColor.GRAY + "Usable Items: " + ChatColor.GREEN + en.userItems());
-						p.sendMessage(ChatColor.GRAY + "Chance to Enchant: " + ChatColor.GREEN + en.getChance() + "%");
-						p.sendMessage(ChatColor.GRAY + "Minimum EXP Cost: " + ChatColor.GREEN + en.getMinExp() + " Level(s)");
-						p.sendMessage(ChatColor.GRAY + "Maximum Level: " + ChatColor.GREEN + en.getMaxLevel());
-						return true;
+						this.displayHelp(p);
+						return false;
 					}
-					this.displayHelp(p);
-					return false;
 				}
 				if (args.length > 1) {
 					int level;
