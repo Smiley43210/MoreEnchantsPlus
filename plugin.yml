@@ -1,0 +1,21 @@
+name: MoreEnchantsPlus
+main: me.adam561.mep2.Main
+version: 2.0.1
+author: adam561
+website: http://dev.bukkit.org/bukkit-plugins/moreenchatsplus/
+
+prefix: MoreEnchants+
+permissions:
+   mep.enchant:
+      description: Allows to enchant items with custom enchantments
+      default: true
+   mep.command:
+         description: Allows to use the '/mep enchant' command
+         default: op
+   mep.update:
+         description: Allows to use the '/mep update' command and automagically update More Enchants+ to latest version
+         default: op
+
+commands:
+   mep:
+     description: Base More Enchants+ command

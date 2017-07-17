@@ -1,0 +1,13 @@
+### Default configuration file for More Enchants Plus v2.0
+###
+### Author: Adam561
+### Version: 2.0
+### Website: http://dev.bukkit.org/bukkit-plugins/moreenchatsplus/
+
+canUpdate: true
+metrics: true
+
+### Chance to enchant an item with Fire Infused ( x% )
+chance_for_FirePick: 100
+### Minimum level requirement for Fire Infused to show up ( x Levels )
+cost_for_FirePick: 10
