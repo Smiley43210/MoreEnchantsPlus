@@ -1,18 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.ChatColor
- *  org.bukkit.entity.HumanEntity
- *  org.bukkit.entity.Player
- *  org.bukkit.event.EventHandler
- *  org.bukkit.event.Listener
- *  org.bukkit.event.entity.FoodLevelChangeEvent
- *  org.bukkit.inventory.ItemStack
- *  org.bukkit.inventory.PlayerInventory
- *  org.bukkit.potion.PotionEffect
- *  org.bukkit.potion.PotionEffectType
- */
 package me.adam561.mep2.Enchantments;
 
 import org.bukkit.ChatColor;

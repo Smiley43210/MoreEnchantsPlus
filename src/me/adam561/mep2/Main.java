@@ -1,24 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.Bukkit
- *  org.bukkit.ChatColor
- *  org.bukkit.Material
- *  org.bukkit.command.Command
- *  org.bukkit.command.CommandSender
- *  org.bukkit.configuration.file.FileConfiguration
- *  org.bukkit.entity.Player
- *  org.bukkit.event.EventHandler
- *  org.bukkit.event.Listener
- *  org.bukkit.event.enchantment.EnchantItemEvent
- *  org.bukkit.event.player.PlayerJoinEvent
- *  org.bukkit.inventory.ItemStack
- *  org.bukkit.plugin.Plugin
- *  org.bukkit.plugin.PluginDescriptionFile
- *  org.bukkit.plugin.PluginManager
- *  org.bukkit.plugin.java.JavaPlugin
- */
 package me.adam561.mep2;
 
 import me.adam561.mep2.Enchantments.CustomEnchantment;

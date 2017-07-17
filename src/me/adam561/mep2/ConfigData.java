@@ -1,9 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.configuration.file.FileConfiguration
- */
 package me.adam561.mep2;
 
 public class ConfigData {

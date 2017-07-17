@@ -1,21 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.Bukkit
- *  org.bukkit.ChatColor
- *  org.bukkit.Location
- *  org.bukkit.entity.Entity
- *  org.bukkit.entity.LivingEntity
- *  org.bukkit.entity.Player
- *  org.bukkit.event.EventHandler
- *  org.bukkit.event.Listener
- *  org.bukkit.event.entity.EntityShootBowEvent
- *  org.bukkit.event.player.PlayerMoveEvent
- *  org.bukkit.inventory.ItemStack
- *  org.bukkit.inventory.PlayerInventory
- *  org.bukkit.util.Vector
- */
 package me.adam561.mep2.Enchantments;
 
 import org.bukkit.Bukkit;

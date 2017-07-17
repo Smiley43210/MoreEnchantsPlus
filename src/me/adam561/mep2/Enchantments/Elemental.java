@@ -1,32 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.ChatColor
- *  org.bukkit.entity.Arrow
- *  org.bukkit.entity.Bat
- *  org.bukkit.entity.Blaze
- *  org.bukkit.entity.Chicken
- *  org.bukkit.entity.Cow
- *  org.bukkit.entity.Creeper
- *  org.bukkit.entity.Entity
- *  org.bukkit.entity.Ghast
- *  org.bukkit.entity.Guardian
- *  org.bukkit.entity.LivingEntity
- *  org.bukkit.entity.MagmaCube
- *  org.bukkit.entity.Player
- *  org.bukkit.entity.Rabbit
- *  org.bukkit.entity.Sheep
- *  org.bukkit.entity.Squid
- *  org.bukkit.event.EventHandler
- *  org.bukkit.event.entity.EntityDamageByEntityEvent
- *  org.bukkit.event.entity.EntityDamageEvent
- *  org.bukkit.event.entity.EntityDeathEvent
- *  org.bukkit.inventory.ItemStack
- *  org.bukkit.potion.PotionEffect
- *  org.bukkit.potion.PotionEffectType
- *  org.bukkit.projectiles.ProjectileSource
- */
 package me.adam561.mep2.Enchantments;
 
 import org.bukkit.ChatColor;

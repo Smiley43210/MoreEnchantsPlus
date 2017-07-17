@@ -1,16 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.Server
- *  org.bukkit.configuration.file.YamlConfiguration
- *  org.bukkit.configuration.file.YamlConfigurationOptions
- *  org.bukkit.plugin.Plugin
- *  org.bukkit.plugin.PluginDescriptionFile
- *  org.json.simple.JSONArray
- *  org.json.simple.JSONObject
- *  org.json.simple.JSONValue
- */
 package me.adam561.mep2.VersionManager;
 
 import org.bukkit.configuration.file.YamlConfiguration;

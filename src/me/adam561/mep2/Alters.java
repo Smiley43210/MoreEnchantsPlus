@@ -1,19 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.Location
- *  org.bukkit.Material
- *  org.bukkit.World
- *  org.bukkit.block.Block
- *  org.bukkit.block.BlockFace
- *  org.bukkit.entity.LightningStrike
- *  org.bukkit.event.EventHandler
- *  org.bukkit.event.Listener
- *  org.bukkit.event.block.Action
- *  org.bukkit.event.player.PlayerInteractEvent
- *  org.bukkit.inventory.ItemStack
- */
 package me.adam561.mep2;
 
 import me.adam561.mep2.Enchantments.MEPEnchantment;

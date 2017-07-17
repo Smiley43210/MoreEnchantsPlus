@@ -1,17 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- * 
- * Could not load the following classes:
- *  org.bukkit.Bukkit
- *  org.bukkit.Server
- *  org.bukkit.configuration.InvalidConfigurationException
- *  org.bukkit.configuration.file.YamlConfiguration
- *  org.bukkit.configuration.file.YamlConfigurationOptions
- *  org.bukkit.plugin.Plugin
- *  org.bukkit.plugin.PluginDescriptionFile
- *  org.bukkit.scheduler.BukkitScheduler
- *  org.bukkit.scheduler.BukkitTask
- */
 package me.adam561.mep2.VersionManager;
 
 import org.bukkit.Bukkit;

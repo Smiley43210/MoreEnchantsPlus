@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0_122.
- */
 package me.adam561.mep2;
 
 public class RomanNumerals {
