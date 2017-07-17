@@ -34,11 +34,15 @@ public class Main extends JavaPlugin implements Listener {
 	private ArrayList<CustomEnchantment> enchants = new ArrayList<CustomEnchantment>();
 	
 	public void onEnable() {
-		this.initConfig();
-		Bukkit.getServer().getPluginManager().registerEvents(this, this);
 		if (plugin == null) {
 			plugin = this;
 		}
+		
+		this.initConfig();
+		
+		Bukkit.getServer().getPluginManager().registerEvents(this, this);
+		Bukkit.getServer().getPluginManager().registerEvents(new Altars(), this);
+		
 		if (this.getConfig().getBoolean("canUpdate")) {
 			Updater updater = new Updater(this, 79543, this.getFile(), Updater.UpdateType.NO_DOWNLOAD, false);
 			update = updater.getResult() == Updater.UpdateResult.UPDATE_AVAILABLE;
@@ -47,6 +51,7 @@ public class Main extends JavaPlugin implements Listener {
 			type = updater.getLatestType();
 			link = updater.getLatestFileLink();
 		}
+		
 		if (this.getConfig().getBoolean("metrics")) {
 			try {
 				Metrics metrics = new Metrics(this);
@@ -55,8 +60,8 @@ public class Main extends JavaPlugin implements Listener {
 				// empty catch block
 			}
 		}
+		
 		this.initEnchantments();
-		Bukkit.getServer().getPluginManager().registerEvents(new Altars(), Main.getPlugin());
 	}
 	
 	private void initEnchantments() {
