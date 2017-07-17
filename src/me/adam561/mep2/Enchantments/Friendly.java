@@ -1,6 +1,7 @@
 package me.adam561.mep2.Enchantments;
 
 import org.bukkit.ChatColor;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.EnderDragon;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -31,7 +32,7 @@ public class Friendly extends CustomEnchantment implements Listener {
 		if (!this.itemHasEnchantment(p.getInventory().getLeggings())) {
 			return;
 		}
-		if (le.getHealth() == le.getMaxHealth()) {
+		if (le.getHealth() == le.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue()) {
 			e.setCancelled(true);
 			e.setTarget(null);
 		}
