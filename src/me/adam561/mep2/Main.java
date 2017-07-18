@@ -261,6 +261,8 @@ public class Main extends JavaPlugin implements Listener {
 					if ("altar".startsWith(args[0].toLowerCase())) {
 						comps.add("altar");
 					}
+					if ("list".startsWith(args[0].toLowerCase())) {
+						comps.add("list");
 					}
 					if ("update".startsWith(args[0].toLowerCase()) && sender.hasPermission("mep.update")) {
 						comps.add("update");
