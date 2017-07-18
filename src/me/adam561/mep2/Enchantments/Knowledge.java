@@ -70,7 +70,7 @@ public class Knowledge extends CustomEnchantment implements Listener {
 	
 	@Override
 	public String userDescription() {
-		return "Gain more EXP for killing mobs.\n Only obtainable via altars. \n '/mep Altar' for help.";
+		return "Gain more EXP for killing mobs.\n Only obtainable via altars. \n '/mep altar' for help.";
 	}
 	
 	@Override

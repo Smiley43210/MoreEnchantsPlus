@@ -121,16 +121,16 @@ public class Main extends JavaPlugin implements Listener {
 	public void displayHelp(Player p) {
 		p.sendMessage("");
 		p.sendMessage(ChatColor.GOLD + " --- More Enchants+ " + this.getDescription().getVersion() + " Commands --- ");
-		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " Help");
+		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " help");
 		p.sendMessage(ChatColor.GRAY + "    - Show this dialogue");
-		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " Altar");
+		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " altar");
 		p.sendMessage(ChatColor.GRAY + "    - View tutorials for building Knowledge-Infused altars");
-		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <Enchantment>");
+		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <enchantment>");
 		p.sendMessage(ChatColor.GRAY + "    - Get enchantment info");
-		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " List");
+		p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " list");
 		p.sendMessage(ChatColor.GRAY + "    - Show list of enchantments");
 		if (p.hasPermission("mep.command")) {
-			p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <Enchantment> <Level>");
+			p.sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " <enchantment> <level>");
 			p.sendMessage(ChatColor.GRAY + "    - Enchant item with level");
 		}
 		p.sendMessage(ChatColor.GOLD + " Version: " + ChatColor.GREEN + this.getDescription().getVersion());
@@ -256,22 +256,23 @@ public class Main extends JavaPlugin implements Listener {
 						}
 					}
 					if ("help".startsWith(args[0].toLowerCase())) {
-						comps.add("Help");
+						comps.add("help");
 					}
 					if ("altar".startsWith(args[0].toLowerCase())) {
-						comps.add("Altar");
+						comps.add("altar");
+					}
 					}
 					if ("update".startsWith(args[0].toLowerCase()) && sender.hasPermission("mep.update")) {
-						comps.add("Update");
+						comps.add("update");
 					}
 				} else {
 					for (CustomEnchantment en : this.enchants) {
 						comps.add(en.toString());
 					}
-					comps.add("Help");
-					comps.add("Altar");
+					comps.add("help");
+					comps.add("altar");
 					if (sender.hasPermission("mep.update")) {
-						comps.add("Update");
+						comps.add("update");
 					}
 				}
 			}
@@ -302,7 +303,7 @@ public class Main extends JavaPlugin implements Listener {
 		if (web > cur) {
 			e.getPlayer().sendMessage(ChatColor.GREEN + " An update for MoreEnchants+ is available ");
 			e.getPlayer().sendMessage(ChatColor.GREEN + " A " + ChatColor.GOLD + (type) + ChatColor.GREEN + " version " + ChatColor.GOLD + webVersion + ChatColor.GREEN + " for " + ChatColor.GOLD + version);
-			e.getPlayer().sendMessage(ChatColor.GREEN + "/mep Update to update");
+			e.getPlayer().sendMessage(ChatColor.GREEN + "/mep update to update");
 		} else if (cur > web) {
 			e.getPlayer().sendMessage(ChatColor.GREEN + " Ooo, you are using a version of MoreEnchants+ that hasn't been released yet! Enjoy :)");
 		}
