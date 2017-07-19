@@ -234,7 +234,7 @@ public class Main extends JavaPlugin implements Listener {
 						p.sendMessage(ChatColor.GREEN + "[ME+] Successfully enchanted your " + item.getType().toString().toLowerCase().replaceAll("_", " ") + " with " + en.getName() + " " + RomanNumerals.getRoman(level));
 						return true;
 					}
-					p.sendMessage(ChatColor.RED + "[ME+] Please enter a valid enchantment! '/mep list' for a list of enchantments");
+					p.sendMessage(ChatColor.RED + "[ME+] Please enter a valid enchantment! Use " + ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " list" + ChatColor.RESET + " for a list of enchantments.");
 					return false;
 				}
 			}
@@ -305,7 +305,7 @@ public class Main extends JavaPlugin implements Listener {
 		if (web > cur) {
 			e.getPlayer().sendMessage(ChatColor.GREEN + " An update for MoreEnchants+ is available ");
 			e.getPlayer().sendMessage(ChatColor.GREEN + " A " + ChatColor.GOLD + (type) + ChatColor.GREEN + " version " + ChatColor.GOLD + webVersion + ChatColor.GREEN + " for " + ChatColor.GOLD + version);
-			e.getPlayer().sendMessage(ChatColor.GREEN + "/mep update to update");
+			e.getPlayer().sendMessage(ChatColor.GRAY + "/" + ChatColor.GREEN + "mep" + ChatColor.DARK_GREEN + " update" + ChatColor.GREEN + " to update");
 		} else if (cur > web) {
 			e.getPlayer().sendMessage(ChatColor.GREEN + " Ooo, you are using a version of MoreEnchants+ that hasn't been released yet! Enjoy :)");
 		}
