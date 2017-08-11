@@ -14,13 +14,13 @@ import java.util.List;
 
 public class CustomEnchantment implements Listener {
 	private String name;
-	private String congfigID;
+	private String configID;
 	private ChatColor color;
 	private ConfigData data;
 	private String[] permittedItems;
 	
 	public CustomEnchantment(String configID, String name, ChatColor color, String[] permittedItems) {
-		this.congfigID = configID;
+		this.configID = configID;
 		this.name = name;
 		this.color = color;
 		this.data = new ConfigData(configID);
@@ -130,8 +130,8 @@ public class CustomEnchantment implements Listener {
 		return "Not Found";
 	}
 	
-	public String getCongfigID() {
-		return this.congfigID;
+	public String getConfigID() {
+		return this.configID;
 	}
 	
 	public int getMinExp() {

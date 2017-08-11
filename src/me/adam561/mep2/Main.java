@@ -87,7 +87,7 @@ public class Main extends JavaPlugin implements Listener {
 	}
 	
 	@EventHandler
-	public void onEnhantmentEvent(EnchantItemEvent e) {
+	public void onEnchantmentEvent(EnchantItemEvent e) {
 		if (!e.getEnchanter().hasPermission("mep.enchant")) {
 			return;
 		}
@@ -106,9 +106,9 @@ public class Main extends JavaPlugin implements Listener {
 				continue;
 			}
 			float step = 30 / en.getMaxLevel();
-			int levl = rand.nextInt(2);
+			int level = rand.nextInt(2);
 			int finalLevel = (int) Math.floor((float) e.getExpLevelCost() / step);
-			if (levl == 1) {
+			if (level == 1) {
 				--finalLevel;
 			}
 			if (finalLevel <= 0) {
