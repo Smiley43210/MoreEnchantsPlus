@@ -49,7 +49,7 @@ public class CustomEnchantment implements Listener {
 		if (level > 0) {
 			roman = " " + RomanNumerals.getRoman(level);
 		}
-		if (!itemToEnchant.hasItemMeta()) {
+		if (!itemToEnchant.getItemMeta().hasLore()) {
 			ItemMeta im = itemToEnchant.getItemMeta();
 			ArrayList<String> lore = new ArrayList<String>();
 			lore.add(this.color + this.name + roman);
